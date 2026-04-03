@@ -1,10 +1,8 @@
 import Link from "next/link";
-import PrimaryHeader from "../components/PrimaryHeader";
 
 export default function HomePage() {
   return (
     <>
-      <PrimaryHeader />
 
       <main className="grimoire-wrap">
         <div className="grimoire-container">
