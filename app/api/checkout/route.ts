@@ -41,10 +41,10 @@ export async function POST(req: NextRequest) {
       mode: "payment",
       payment_method_types: ["card"],
       line_items,
-  success_url:
-  "https://your-vercel-site.vercel.app/wicked-shops/cart?success=true&session_id={CHECKOUT_SESSION_ID}",
-cancel_url:
-  "https://your-vercel-site.vercel.app/wicked-shops/cart?canceled=true",
+      success_url:
+        "https://www.thewickedwitchoftheweb.net/wicked-shops/cart?success=true&session_id={CHECKOUT_SESSION_ID}",
+      cancel_url:
+        "https://www.thewickedwitchoftheweb.net/wicked-shops/cart?canceled=true",
     });
 
     return NextResponse.json({ url: session.url });

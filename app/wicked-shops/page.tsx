@@ -41,6 +41,13 @@ export default function WickedShopsIndex() {
             Wicked Tarot Spreads
           </Link>
 
+           <Link
+            className="grimoire-index-link"
+            href="/wicked-shops/law-of-attraction"
+          >
+            April - Law of Attraction Assets
+          </Link>
+
         </section>
       </SectionPage>
     </>

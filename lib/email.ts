@@ -11,6 +11,10 @@ type ProductDownload = {
   available: boolean;
 };
 
+/* =========================
+   PRODUCT DATABASE
+========================= */
+
 const PRODUCT_DOWNLOADS: Record<string, ProductDownload> = {
   // MAIN GUIDES
   "deliberate-creation": {
@@ -46,7 +50,7 @@ const PRODUCT_DOWNLOADS: Record<string, ProductDownload> = {
     available: true,
   },
 
-  // TOOLTIKS
+  // TOOLKITS
   "5-minute-state-reset": {
     title: "The 5 Minute State Reset",
     url: "https://drive.google.com/file/d/1am4C9oGxvnnew0LprKJfPlYzxIQkA6s0/view?usp=sharing",
@@ -68,7 +72,7 @@ const PRODUCT_DOWNLOADS: Record<string, ProductDownload> = {
     available: true,
   },
 
-  // TAROT SPREADS
+  // TAROT
   "pattern-reveal-spread": {
     title: "The Pattern Reveal Spread",
     url: "https://drive.google.com/file/d/18OwPyvrgu07c3YWr6RKMcp9OCIEcwZTC/view?usp=sharing",
@@ -79,7 +83,7 @@ const PRODUCT_DOWNLOADS: Record<string, ProductDownload> = {
     url: "https://drive.google.com/file/d/1raVnEOM4Kcohq9htmJsaS_pVHa4kbXb2/view?usp=drive_link",
     available: true,
   },
-  "interference-vs-control": {
+  "influence-vs-control": {
     title: "The Influence vs Control Spread",
     url: "https://drive.google.com/file/d/1e4OKPKJXA5_PitOKofEHTwxN9pfZlSt9/view?usp=sharing",
     available: true,
@@ -89,19 +93,53 @@ const PRODUCT_DOWNLOADS: Record<string, ProductDownload> = {
     url: "https://drive.google.com/file/d/1LwRIJT1zQ0rkiuTJiJ4KJEgHdXXMIRBw/view?usp=sharing",
     available: true,
   },
-
-  // BUNDLES
-  "guide-bundle": {
-    title: "Guide Bundle",
-    url: "",
-    available: false,
-  },
-  "full-loa-set-bundle": {
-    title: "Full LOA Set Bundle",
-    url: "",
-    available: false,
-  },
 };
+
+/* =========================
+   BUNDLE MAP (THE FIX)
+========================= */
+
+const BUNDLE_CONTENTS: Record<string, string[]> = {
+  "the-initiate-bundle": [
+    "mechanics-of-response",
+    "how-alignment-actually-works",
+    "limits-of-control",
+    "how-manifestation-actually-unfolds",
+  ],
+
+  "the-conduit-bundle": [
+    "mechanics-of-response",
+    "how-alignment-actually-works",
+    "limits-of-control",
+    "how-manifestation-actually-unfolds",
+    "pattern-reveal-spread",
+    "interference-spread",
+    "influence-vs-control",
+    "unfolding-sequence-spread",
+    "stability-principle",
+  ],
+
+  "the-supreme-bundle": [
+    "deliberate-creation",
+    "stability-principle",
+    "mechanics-of-response",
+    "how-alignment-actually-works",
+    "limits-of-control",
+    "how-manifestation-actually-unfolds",
+    "5-minute-state-reset",
+    "interference-interrupt",
+    "control-release",
+    "sequence-awareness",
+    "pattern-reveal-spread",
+    "interference-spread",
+    "influence-vs-control",
+    "unfolding-sequence-spread",
+  ],
+};
+
+/* =========================
+   EMAIL SETUP
+========================= */
 
 export const transporter = nodemailer.createTransport({
   service: "gmail",
@@ -111,8 +149,31 @@ export const transporter = nodemailer.createTransport({
   },
 });
 
+/* =========================
+   CORE LOGIC
+========================= */
+
+function expandBundles(purchasedItems: PurchasedItem[]) {
+  const expanded: PurchasedItem[] = [];
+
+  for (const item of purchasedItems) {
+    if (BUNDLE_CONTENTS[item.id]) {
+      const bundleItems = BUNDLE_CONTENTS[item.id];
+      bundleItems.forEach((id) => {
+        expanded.push({ id, quantity: 1 });
+      });
+    } else {
+      expanded.push(item);
+    }
+  }
+
+  return expanded;
+}
+
 function buildDownloadsHtml(purchasedItems: PurchasedItem[]) {
-  const uniqueIds = [...new Set(purchasedItems.map((item) => item.id))];
+  const expandedItems = expandBundles(purchasedItems);
+
+  const uniqueIds = [...new Set(expandedItems.map((item) => item.id))];
 
   const availableDownloads = uniqueIds
     .map((id) => PRODUCT_DOWNLOADS[id])
@@ -121,83 +182,33 @@ function buildDownloadsHtml(purchasedItems: PurchasedItem[]) {
         Boolean(product && product.available && product.url)
     );
 
-  const unavailableDownloads = uniqueIds
-    .map((id) => PRODUCT_DOWNLOADS[id])
-    .filter(
-      (product): product is ProductDownload =>
-        Boolean(product && (!product.available || !product.url))
-    );
-
-  const unknownItems = uniqueIds.filter((id) => !PRODUCT_DOWNLOADS[id]);
-
-  const availableSection =
-    availableDownloads.length > 0
-      ? `
-        <h2>Your purchase is complete</h2>
-        <p>Your available downloads are below:</p>
-        <ul>
-          ${availableDownloads
-            .map(
-              (product) => `
-                <li style="margin-bottom: 12px;">
-                  <strong>${product.title}</strong><br />
-                  <a href="${product.url}">Download ${product.title}</a>
-                </li>
-              `
-            )
-            .join("")}
-        </ul>
-      `
-      : `
-        <h2>Your purchase is complete</h2>
-        <p>Thank you for your order.</p>
-      `;
-
-  const unavailableSection =
-    unavailableDownloads.length > 0
-      ? `
-        <p>The following items are not connected for automatic delivery yet:</p>
-        <ul>
-          ${unavailableDownloads
-            .map(
-              (product) => `
-                <li style="margin-bottom: 8px;">
-                  ${product.title}
-                </li>
-              `
-            )
-            .join("")}
-        </ul>
-        <p>Please send these manually until their delivery links are connected.</p>
-      `
-      : "";
-
-  const unknownSection =
-    unknownItems.length > 0
-      ? `
-        <p>The following product IDs were not recognized by the email system:</p>
-        <ul>
-          ${unknownItems
-            .map(
-              (id) => `
-                <li style="margin-bottom: 8px;">
-                  ${id}
-                </li>
-              `
-            )
-            .join("")}
-        </ul>
-      `
-      : "";
-
   return `
-    ${availableSection}
-    ${unavailableSection}
-    ${unknownSection}
+    <h2>Your purchase is complete</h2>
+    <p>Your downloads are below:</p>
+
+    <ul>
+      ${availableDownloads
+        .map(
+          (product) => `
+          <li style="margin-bottom: 12px;">
+            <strong>${product.title}</strong><br />
+            <a href="${product.url}">Download ${product.title}</a>
+          </li>
+        `
+        )
+        .join("")}
+    </ul>
   `;
 }
 
-export async function sendGuideEmail(to: string, purchasedItems: PurchasedItem[]) {
+/* =========================
+   SEND EMAIL
+========================= */
+
+export async function sendGuideEmail(
+  to: string,
+  purchasedItems: PurchasedItem[]
+) {
   await transporter.sendMail({
     from: `"Wicked | The Wicked Witch of the Web" <${process.env.EMAIL_USER}>`,
     to,
