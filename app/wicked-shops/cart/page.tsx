@@ -25,7 +25,7 @@ export default function CartPage() {
     const handleSuccess = async () => {
       if (isSuccess && sessionId) {
         try {
-          await fetch("/api/send-guide", {
+          await fetch("/api/send-products", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -33,7 +33,7 @@ export default function CartPage() {
             body: JSON.stringify({ sessionId }),
           });
         } catch (error) {
-          console.error("Send guide error:", error);
+          console.error("Send products error:", error);
         }
 
         localStorage.removeItem("wicked-cart");
@@ -85,21 +85,15 @@ export default function CartPage() {
           <section className="grimoire-section">
             <p className="grimoire-subheading">Payment Received</p>
 
-            <p className="grimoire-text">
-              Your order was successful.
-            </p>
+            <p className="grimoire-text">Your order was successful.</p>
 
             <p className="grimoire-text">
               Your guide has been sent to your email.
             </p>
 
             <footer className="grimoire-footer">
-
               <p>
-                <Link
-                  href="/wicked-shops"
-                  className="grimoire-footer-link"
-                >
+                <Link href="/wicked-shops" className="grimoire-footer-link">
                   ← Back to Wicked Shops
                 </Link>
               </p>
@@ -110,12 +104,8 @@ export default function CartPage() {
             <p className="grimoire-text">Your cart is currently empty.</p>
 
             <footer className="grimoire-footer">
-
               <p>
-                <Link
-                  href="/wicked-shops"
-                  className="grimoire-footer-link"
-                >
+                <Link href="/wicked-shops" className="grimoire-footer-link">
                   ← Back to Wicked Shops
                 </Link>
               </p>
@@ -238,13 +228,8 @@ export default function CartPage() {
             </section>
 
             <footer className="grimoire-footer">
-
-
               <p>
-                <Link
-                  href="/wicked-shops"
-                  className="grimoire-footer-link"
-                >
+                <Link href="/wicked-shops" className="grimoire-footer-link">
                   ← Back to Wicked Shops
                 </Link>
               </p>
