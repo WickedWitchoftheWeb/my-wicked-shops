@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import LimitedHeader from "../../../../components/shops/LimitedHeader";
 import SectionPage from "../../../../components/grimoire/SectionPage";
 
@@ -9,22 +8,21 @@ export default function LOABundlesPage() {
       <LimitedHeader />
 
       <SectionPage title="Law of Attraction Bundles" subtitle="">
-        
         <div className="grimoire-divider" />
 
         {/* BUNDLES */}
         <section className="grimoire-grid">
-          
           {/* THE INITIATE */}
           <div className="grimoire-card" style={{ textAlign: "center" }}>
             <Link href="/wicked-shops/law-of-attraction/bundles/the-initiate">
-              <Image
+              <img
                 src="https://ik.imagekit.io/w1ck3d/shops/the-initiate-nt.png"
                 alt="The Initiate Bundle"
                 width={320}
                 height={420}
                 className="grimoire-card-img"
                 style={{
+                  display: "block",
                   margin: "0 auto",
                   border: "1px solid rgba(255,255,255,0.2)",
                 }}
@@ -46,13 +44,14 @@ export default function LOABundlesPage() {
           {/* THE CONDUIT */}
           <div className="grimoire-card" style={{ textAlign: "center" }}>
             <Link href="/wicked-shops/law-of-attraction/bundles/the-conduit">
-              <Image
+              <img
                 src="https://ik.imagekit.io/w1ck3d/shops/the-conduit-nt.png"
                 alt="The Conduit Bundle"
                 width={320}
                 height={420}
                 className="grimoire-card-img"
                 style={{
+                  display: "block",
                   margin: "0 auto",
                   border: "1px solid rgba(255,255,255,0.2)",
                 }}
@@ -74,13 +73,14 @@ export default function LOABundlesPage() {
           {/* THE SUPREME */}
           <div className="grimoire-card" style={{ textAlign: "center" }}>
             <Link href="/wicked-shops/law-of-attraction/bundles/the-supreme">
-              <Image
+              <img
                 src="https://ik.imagekit.io/w1ck3d/shops/the-supreme-nt.png"
                 alt="The Supreme Bundle"
                 width={320}
                 height={420}
                 className="grimoire-card-img"
                 style={{
+                  display: "block",
                   margin: "0 auto",
                   border: "1px solid rgba(255,255,255,0.2)",
                 }}
