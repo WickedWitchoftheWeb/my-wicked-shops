@@ -38,8 +38,18 @@ export default function LimitedHeader() {
   return (
     <header className="secondary-header limited-header">
       <div className="secondary-header-inner">
-        <nav className="secondary-nav secondary-nav-left" aria-hidden="true" />
+        
+        {/* LEFT SIDE */}
+        <nav className="secondary-nav secondary-nav-left">
+          <Link
+            href="/wicked-shops/contact"
+            className="wicked-link secondary-nav-link"
+          >
+            Contact
+          </Link>
+        </nav>
 
+        {/* LOGO */}
         <Link href="/" className="secondary-logo-link">
           <Image
             src="https://ik.imagekit.io/w1ck3d/logos/white-wicked-moon-transparent.png"
@@ -51,6 +61,7 @@ export default function LimitedHeader() {
           />
         </Link>
 
+        {/* RIGHT SIDE */}
         <nav
           className="secondary-nav secondary-nav-right"
           style={{
@@ -64,13 +75,6 @@ export default function LimitedHeader() {
             className="wicked-link secondary-nav-link"
           >
             Wicked Shops
-          </Link>
-
-          <Link
-            href="/wicked-shops/contact"
-            className="wicked-link secondary-nav-link"
-          >
-            Contact
           </Link>
 
           <Link
