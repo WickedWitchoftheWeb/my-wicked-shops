@@ -37,10 +37,22 @@ export default function LimitedHeader() {
 
   return (
     <header className="secondary-header limited-header">
-      <div className="secondary-header-inner">
-        
+      <div
+        className="secondary-header-inner"
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr auto 1fr",
+          alignItems: "center",
+        }}
+      >
         {/* LEFT SIDE */}
-        <nav className="secondary-nav secondary-nav-left">
+        <nav
+          className="secondary-nav secondary-nav-left"
+          style={{
+            justifySelf: "start",
+            paddingLeft: "0.5rem",
+          }}
+        >
           <Link
             href="/wicked-shops/contact"
             className="wicked-link secondary-nav-link"
@@ -49,8 +61,12 @@ export default function LimitedHeader() {
           </Link>
         </nav>
 
-        {/* LOGO */}
-        <Link href="/" className="secondary-logo-link">
+        {/* LOGO (TRUE CENTER) */}
+        <Link
+          href="/"
+          className="secondary-logo-link"
+          style={{ justifySelf: "center" }}
+        >
           <Image
             src="https://ik.imagekit.io/w1ck3d/logos/white-wicked-moon-transparent.png"
             alt="The Wicked Witch of the Web logo"
@@ -68,6 +84,8 @@ export default function LimitedHeader() {
             display: "flex",
             alignItems: "center",
             gap: "1rem",
+            justifySelf: "end",
+            paddingRight: "0.5rem",
           }}
         >
           <Link

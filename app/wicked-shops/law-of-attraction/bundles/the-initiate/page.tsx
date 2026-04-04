@@ -6,6 +6,8 @@ import LimitedHeader from "../../../../../components/shops/LimitedHeader";
 import SectionPage from "../../../../../components/grimoire/SectionPage";
 
 export default function TheInitiateBundlePage() {
+  const image = "/initiate-bundle.png";
+
   const product = {
     id: "the-initiate-bundle",
     name: "The Initiate Bundle",
@@ -101,24 +103,16 @@ export default function TheInitiateBundlePage() {
               marginTop: "1rem",
             }}
           >
-            <div
-              className="grimoire-card-img"
+            <img
+              src="https://ik.imagekit.io/w1ck3d/shops/the-initiate-nt.png"
+              alt="The Initiate Bundle"
               style={{
                 width: "100%",
                 maxWidth: "500px",
-                height: "650px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                border: "1px solid rgba(255,255,255,0.2)",
-                color: "rgba(255,255,255,0.7)",
-                textAlign: "center",
-                padding: "1rem",
+                display: "block",
                 transform: "translateY(6px)",
               }}
-            >
-              The Initiate Bundle Cover Placeholder
-            </div>
+            />
           </div>
 
           {/* DESCRIPTION */}
