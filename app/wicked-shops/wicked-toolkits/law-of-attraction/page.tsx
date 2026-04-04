@@ -22,19 +22,19 @@ export default function WickedToolkitsLandingPage() {
         {/* PRODUCTS */}
         <section className="grimoire-grid">
 
-          {/* WEEK ONE */}
+          {/* BUNDLES */}
           <div className="grimoire-card" style={{ textAlign: "center" }}>
             <p className="grimoire-subheading" style={{ marginBottom: "0.75rem" }}>
-              Week One
+              Bundles
             </p>
 
             <Link
-               href="/wicked-shops/wicked-toolkits/law-of-attraction/5-minute-state-reset"
+              href="/wicked-shops/law-of-attraction/bundles"
               className="wicked-link"
             >
               <img
-                src="https://ik.imagekit.io/w1ck3d/shops/loa-week-one/tkw1-cover.png?updatedAt=1775151160679"
-                alt="The 5 Minute State Reset "
+                src="https://ik.imagekit.io/w1ck3d/shops/the-supreme-nt.png"
+                alt="Law of Attraction Bundles"
                 className="grimoire-card-img"
                 style={{
                   maxWidth: "320px",
@@ -45,11 +45,45 @@ export default function WickedToolkitsLandingPage() {
             </Link>
 
             <Link
-               href="/wicked-shops/wicked-toolkits/law-of-attraction/5-minute-state-reset"
+              href="/wicked-shops/law-of-attraction/bundles"
               className="wicked-link"
             >
               <h2 className="grimoire-card-title" style={{ marginTop: "1rem" }}>
-                The 5 Minute State Resest
+                Explore the Bundles
+              </h2>
+            </Link>
+
+            <div className="grimoire-divider" />
+          </div>
+
+          {/* WEEK ONE */}
+          <div className="grimoire-card" style={{ textAlign: "center" }}>
+            <p className="grimoire-subheading" style={{ marginBottom: "0.75rem" }}>
+              Week One
+            </p>
+
+            <Link
+              href="/wicked-shops/wicked-toolkits/law-of-attraction/5-minute-state-reset"
+              className="wicked-link"
+            >
+              <img
+                src="https://ik.imagekit.io/w1ck3d/shops/loa-week-one/tkw1-cover.png?updatedAt=1775151160679"
+                alt="The 5 Minute State Reset"
+                className="grimoire-card-img"
+                style={{
+                  maxWidth: "320px",
+                  margin: "0 auto",
+                  display: "block",
+                }}
+              />
+            </Link>
+
+            <Link
+              href="/wicked-shops/wicked-toolkits/law-of-attraction/5-minute-state-reset"
+              className="wicked-link"
+            >
+              <h2 className="grimoire-card-title" style={{ marginTop: "1rem" }}>
+                The 5 Minute State Reset
               </h2>
             </Link>
 
@@ -63,7 +97,7 @@ export default function WickedToolkitsLandingPage() {
             </p>
 
             <Link
-               href="/wicked-shops/wicked-toolkits/law-of-attraction/interference-interrupt"
+              href="/wicked-shops/wicked-toolkits/law-of-attraction/interference-interrupt"
               className="wicked-link"
             >
               <img
@@ -79,7 +113,7 @@ export default function WickedToolkitsLandingPage() {
             </Link>
 
             <Link
-               href="/wicked-shops/wicked-toolkits/law-of-attraction/interference-interrupt"
+              href="/wicked-shops/wicked-toolkits/law-of-attraction/interference-interrupt"
               className="wicked-link"
             >
               <h2 className="grimoire-card-title" style={{ marginTop: "1rem" }}>
@@ -113,7 +147,7 @@ export default function WickedToolkitsLandingPage() {
             </Link>
 
             <Link
-               href="/wicked-shops/wicked-toolkits/law-of-attraction/control-release"
+              href="/wicked-shops/wicked-toolkits/law-of-attraction/control-release"
               className="wicked-link"
             >
               <h2 className="grimoire-card-title" style={{ marginTop: "1rem" }}>
@@ -147,7 +181,7 @@ export default function WickedToolkitsLandingPage() {
             </Link>
 
             <Link
-               href="/wicked-shops/wicked-toolkits/law-of-attraction/sequence-awareness"
+              href="/wicked-shops/wicked-toolkits/law-of-attraction/sequence-awareness"
               className="wicked-link"
             >
               <h2 className="grimoire-card-title" style={{ marginTop: "1rem" }}>

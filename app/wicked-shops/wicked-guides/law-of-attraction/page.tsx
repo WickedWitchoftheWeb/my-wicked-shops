@@ -22,6 +22,40 @@ export default function WickedGuidesLandingPage() {
         {/* PRODUCTS */}
         <section className="grimoire-grid">
 
+          {/* BUNDLES */}
+          <div className="grimoire-card" style={{ textAlign: "center" }}>
+            <p className="grimoire-subheading" style={{ marginBottom: "0.75rem" }}>
+              Bundles
+            </p>
+
+            <Link
+              href="/wicked-shops/law-of-attraction/bundles"
+              className="wicked-link"
+            >
+              <img
+                src="https://ik.imagekit.io/w1ck3d/shops/the-supreme-nt.png"
+                alt="Law of Attraction Bundles"
+                className="grimoire-card-img"
+                style={{
+                  maxWidth: "320px",
+                  margin: "0 auto",
+                  display: "block",
+                }}
+              />
+            </Link>
+
+            <Link
+              href="/wicked-shops/law-of-attraction/bundles"
+              className="wicked-link"
+            >
+              <h2 className="grimoire-card-title" style={{ marginTop: "1rem" }}>
+                Explore the Bundles
+              </h2>
+            </Link>
+
+            <div className="grimoire-divider" />
+          </div>
+
           {/* DELIBERATE CREATION */}
           <div className="grimoire-card" style={{ textAlign: "center" }}>
             <p className="grimoire-subheading" style={{ marginBottom: "0.75rem" }}>

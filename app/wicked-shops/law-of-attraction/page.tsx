@@ -19,125 +19,113 @@ export default function LOAHubPage() {
 
         <div className="grimoire-divider" />
 
-      {/* BUNDLES */}
-<section className="grimoire-grid">
-  {/* INITIATE */}
-  <div className="grimoire-card" style={{ textAlign: "center" }}>
-    <p className="grimoire-subheading" style={{ marginBottom: "0.75rem" }}>
-      Bundle
-    </p>
+        {/* BUNDLES */}
+        <section className="grimoire-grid">
+          {/* INITIATE */}
+          <div className="grimoire-card" style={{ textAlign: "center" }}>
+            <p className="grimoire-subheading" style={{ marginBottom: "0.75rem" }}>
+              Bundle
+            </p>
 
-    <Link href="/wicked-shops/law-of-attraction/bundles/the-initiate">
-      <div
-        className="grimoire-card-img"
-        style={{
-          maxWidth: "280px",
-          height: "360px",
-          margin: "0 auto",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          border: "1px solid rgba(255,255,255,0.2)",
-          color: "rgba(255,255,255,0.7)",
-          textAlign: "center",
-          padding: "1rem",
-          cursor: "pointer",
-        }}
-      >
-        Initiate Image Placeholder
-      </div>
-    </Link>
+            <Link href="/wicked-shops/law-of-attraction/bundles/the-initiate">
+              <img
+                src="https://ik.imagekit.io/w1ck3d/shops/the-initiate-nt.png"
+                alt="The Initiate Bundle"
+                className="grimoire-card-img"
+                style={{
+                  maxWidth: "280px",
+                  width: "100%",
+                  height: "auto",
+                  margin: "0 auto",
+                  display: "block",
+                  border: "1px solid rgba(255,255,255,0.2)",
+                  cursor: "pointer",
+                }}
+              />
+            </Link>
 
-    <Link href="/wicked-shops/law-of-attraction/bundles/the-initiate">
-      <h2
-        className="grimoire-card-title"
-        style={{ marginTop: "1rem", cursor: "pointer" }}
-      >
-        The Initiate
-      </h2>
-    </Link>
+            <Link href="/wicked-shops/law-of-attraction/bundles/the-initiate">
+              <h2
+                className="grimoire-card-title"
+                style={{ marginTop: "1rem", cursor: "pointer" }}
+              >
+                The Initiate
+              </h2>
+            </Link>
 
-    <div className="grimoire-divider" />
-  </div>
+            <div className="grimoire-divider" />
+          </div>
 
-  {/* CONDUIT */}
-  <div className="grimoire-card" style={{ textAlign: "center" }}>
-    <p className="grimoire-subheading" style={{ marginBottom: "0.75rem" }}>
-      Bundle
-    </p>
+          {/* CONDUIT */}
+          <div className="grimoire-card" style={{ textAlign: "center" }}>
+            <p className="grimoire-subheading" style={{ marginBottom: "0.75rem" }}>
+              Bundle
+            </p>
 
-    <Link href="/wicked-shops/law-of-attraction/bundles/the-conduit">
-      <div
-        className="grimoire-card-img"
-        style={{
-          maxWidth: "280px",
-          height: "360px",
-          margin: "0 auto",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          border: "1px solid rgba(255,255,255,0.2)",
-          color: "rgba(255,255,255,0.7)",
-          textAlign: "center",
-          padding: "1rem",
-          cursor: "pointer",
-        }}
-      >
-        Conduit Image Placeholder
-      </div>
-    </Link>
+            <Link href="/wicked-shops/law-of-attraction/bundles/the-conduit">
+              <img
+                src="https://ik.imagekit.io/w1ck3d/shops/the-conduit-nt.png"
+                alt="The Conduit Bundle"
+                className="grimoire-card-img"
+                style={{
+                  maxWidth: "280px",
+                  width: "100%",
+                  height: "auto",
+                  margin: "0 auto",
+                  display: "block",
+                  border: "1px solid rgba(255,255,255,0.2)",
+                  cursor: "pointer",
+                }}
+              />
+            </Link>
 
-    <Link href="/wicked-shops/law-of-attraction/bundles/the-conduit">
-      <h2
-        className="grimoire-card-title"
-        style={{ marginTop: "1rem", cursor: "pointer" }}
-      >
-        The Conduit
-      </h2>
-    </Link>
+            <Link href="/wicked-shops/law-of-attraction/bundles/the-conduit">
+              <h2
+                className="grimoire-card-title"
+                style={{ marginTop: "1rem", cursor: "pointer" }}
+              >
+                The Conduit
+              </h2>
+            </Link>
 
-    <div className="grimoire-divider" />
-  </div>
+            <div className="grimoire-divider" />
+          </div>
 
-  {/* SUPREME */}
-  <div className="grimoire-card" style={{ textAlign: "center" }}>
-    <p className="grimoire-subheading" style={{ marginBottom: "0.75rem" }}>
-      Bundle
-    </p>
+          {/* SUPREME */}
+          <div className="grimoire-card" style={{ textAlign: "center" }}>
+            <p className="grimoire-subheading" style={{ marginBottom: "0.75rem" }}>
+              Bundle
+            </p>
 
-    <Link href="/wicked-shops/law-of-attraction/bundles/the-supreme">
-      <div
-        className="grimoire-card-img"
-        style={{
-          maxWidth: "280px",
-          height: "360px",
-          margin: "0 auto",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          border: "1px solid rgba(255,255,255,0.2)",
-          color: "rgba(255,255,255,0.7)",
-          textAlign: "center",
-          padding: "1rem",
-          cursor: "pointer",
-        }}
-      >
-        Supreme Image Placeholder
-      </div>
-    </Link>
+            <Link href="/wicked-shops/law-of-attraction/bundles/the-supreme">
+              <img
+                src="https://ik.imagekit.io/w1ck3d/shops/the-supreme-nt.png"
+                alt="The Supreme Bundle"
+                className="grimoire-card-img"
+                style={{
+                  maxWidth: "280px",
+                  width: "100%",
+                  height: "auto",
+                  margin: "0 auto",
+                  display: "block",
+                  border: "1px solid rgba(255,255,255,0.2)",
+                  cursor: "pointer",
+                }}
+              />
+            </Link>
 
-    <Link href="/wicked-shops/law-of-attraction/bundles/the-supreme">
-      <h2
-        className="grimoire-card-title"
-        style={{ marginTop: "1rem", cursor: "pointer" }}
-      >
-        The Supreme
-      </h2>
-    </Link>
+            <Link href="/wicked-shops/law-of-attraction/bundles/the-supreme">
+              <h2
+                className="grimoire-card-title"
+                style={{ marginTop: "1rem", cursor: "pointer" }}
+              >
+                The Supreme
+              </h2>
+            </Link>
 
-    <div className="grimoire-divider" />
-  </div>
-</section>
+            <div className="grimoire-divider" />
+          </div>
+        </section>
 
         <div className="grimoire-divider" />
 

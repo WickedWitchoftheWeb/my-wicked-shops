@@ -22,6 +22,40 @@ export default function WickedTarotSpreadsLandingPage() {
         {/* PRODUCTS */}
         <section className="grimoire-grid">
 
+          {/* BUNDLES */}
+          <div className="grimoire-card" style={{ textAlign: "center" }}>
+            <p className="grimoire-subheading" style={{ marginBottom: "0.75rem" }}>
+              Bundles
+            </p>
+
+            <Link
+              href="/wicked-shops/law-of-attraction/bundles"
+              className="wicked-link"
+            >
+              <img
+                src="https://ik.imagekit.io/w1ck3d/shops/the-supreme-nt.png"
+                alt="Law of Attraction Bundles"
+                className="grimoire-card-img"
+                style={{
+                  maxWidth: "320px",
+                  margin: "0 auto",
+                  display: "block",
+                }}
+              />
+            </Link>
+
+            <Link
+              href="/wicked-shops/law-of-attraction/bundles"
+              className="wicked-link"
+            >
+              <h2 className="grimoire-card-title" style={{ marginTop: "1rem" }}>
+                Explore the Bundles
+              </h2>
+            </Link>
+
+            <div className="grimoire-divider" />
+          </div>
+
           {/* WEEK ONE */}
           <div className="grimoire-card" style={{ textAlign: "center" }}>
             <p className="grimoire-subheading" style={{ marginBottom: "0.75rem" }}>
@@ -29,7 +63,7 @@ export default function WickedTarotSpreadsLandingPage() {
             </p>
 
             <Link
-               href="/wicked-shops/wicked-tarot-spreads/law-of-attraction/pattern-reveal-spread"
+              href="/wicked-shops/wicked-tarot-spreads/law-of-attraction/pattern-reveal-spread"
               className="wicked-link"
             >
               <img
@@ -45,7 +79,7 @@ export default function WickedTarotSpreadsLandingPage() {
             </Link>
 
             <Link
-               href="/wicked-shops/wicked-tarot-spreads/law-of-attraction/pattern-reveal-spread"
+              href="/wicked-shops/wicked-tarot-spreads/law-of-attraction/pattern-reveal-spread"
               className="wicked-link"
             >
               <h2 className="grimoire-card-title" style={{ marginTop: "1rem" }}>
@@ -63,7 +97,7 @@ export default function WickedTarotSpreadsLandingPage() {
             </p>
 
             <Link
-               href="/wicked-shops/wicked-tarot-spreads/law-of-attraction/interference-spread"
+              href="/wicked-shops/wicked-tarot-spreads/law-of-attraction/interference-spread"
               className="wicked-link"
             >
               <img
@@ -79,7 +113,7 @@ export default function WickedTarotSpreadsLandingPage() {
             </Link>
 
             <Link
-               href="/wicked-shops/wicked-tarot-spreads/law-of-attraction/interference-spread"
+              href="/wicked-shops/wicked-tarot-spreads/law-of-attraction/interference-spread"
               className="wicked-link"
             >
               <h2 className="grimoire-card-title" style={{ marginTop: "1rem" }}>
@@ -113,7 +147,7 @@ export default function WickedTarotSpreadsLandingPage() {
             </Link>
 
             <Link
-               href="/wicked-shops/wicked-tarot-spreads/law-of-attraction/influence-vs-control-spread"
+              href="/wicked-shops/wicked-tarot-spreads/law-of-attraction/influence-vs-control-spread"
               className="wicked-link"
             >
               <h2 className="grimoire-card-title" style={{ marginTop: "1rem" }}>
@@ -147,7 +181,7 @@ export default function WickedTarotSpreadsLandingPage() {
             </Link>
 
             <Link
-               href="/wicked-shops/wicked-tarot-spreads/law-of-attraction/unfolding-sequence-spread"
+              href="/wicked-shops/wicked-tarot-spreads/law-of-attraction/unfolding-sequence-spread"
               className="wicked-link"
             >
               <h2 className="grimoire-card-title" style={{ marginTop: "1rem" }}>
