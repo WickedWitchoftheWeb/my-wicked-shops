@@ -104,7 +104,7 @@ export default function TheConduitPage() {
             }}
           >
             <img
-              src={image}
+              src="https://ik.imagekit.io/w1ck3d/shops/the-conduit-nt.png"
               alt="The Conduit Bundle"
               style={{
                 width: "100%",
