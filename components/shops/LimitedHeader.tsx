@@ -67,6 +67,13 @@ export default function LimitedHeader() {
           </Link>
 
           <Link
+            href="/wicked-shops/contact"
+            className="wicked-link secondary-nav-link"
+          >
+            Contact
+          </Link>
+
+          <Link
             href="/wicked-shops/cart"
             className="wicked-link secondary-nav-link"
             style={{
