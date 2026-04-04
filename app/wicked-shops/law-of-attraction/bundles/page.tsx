@@ -8,7 +8,7 @@ export default function LOABundlesPage() {
       <LimitedHeader />
 
       <SectionPage title="Law of Attraction Bundles" subtitle="">
-        <div className="grimoire-divider" />
+     
 
         {/* BUNDLES */}
         <section className="grimoire-grid">
